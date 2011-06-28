@@ -3,11 +3,7 @@
 """
 MySQL Database Backup...
 """
-import sys
-import os
-import subprocess
-import string
-import datetime
+import sys, os, subprocess, string, datetime
 
 if (len(sys.argv) > 1):
   
