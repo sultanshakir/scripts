@@ -66,6 +66,5 @@ if [ "$level" == "0" ]; then
   sed -i '/^\#/d' $settingsphp
   #comment out old db_url...
   sed -i '/$db_url/ s:^://:' $settingsphp
-  set -i
 fi
 echo "Done Editing Settings.php..."
