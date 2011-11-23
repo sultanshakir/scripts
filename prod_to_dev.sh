@@ -66,5 +66,25 @@ if [ "$level" == "0" ]; then
   sed -i '/^\#/d' $settingsphp
   #comment out old db_url...
   sed -i '/$db_url/ s:^://:' $settingsphp
+  #TODO: Add new db_url with sed..
 fi
 echo "Done Editing Settings.php..."
+
+#Drupal Clear Cache...
+echo "Clearing Drupal Cache.."
+if [ "$level" == "0" ]; then
+  cd $drupal_dev_backup_path;
+  $drush_path/drush cc all
+fi
+echo "Done clearing Drupal's cache system..."
+
+#Disable Modules...
+echo "Disabling Certain Modules.."
+if [ "$level" == "0" ]; then
+  cd $drupal_dev_backup_path;
+  #$drush_path/drush dis securepages
+fi
+echo "Done..."
+
+
+#TODO: Sanatize Data...
