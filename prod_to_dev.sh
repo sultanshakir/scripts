@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#run level... 1 does not EXEC (TEST RUN FOR DEBUG)... 0 is EXEC (ONLY SET TO 0 IF YOUR READY TO RUN THE SCRIPT FOR REALZ)
+#Run Level.. 1 = dry run.. 0 = wet run
 level="1"
 
 #vars..NEVER add a trailing slash
